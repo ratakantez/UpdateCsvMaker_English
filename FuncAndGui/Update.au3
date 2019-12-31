@@ -170,7 +170,7 @@ Func TryUpdate()
 				EndIf
 				if $UpdateFileExistsEXE Or $UpdateFileExistsAU3 Then
 ;~ 	 				MsgBox($MB_OK,"AUTO UPDATE","file exist")
-					MsgBox($MB_OK,"AUTO UPDATE","Update (" & String($Getversion) &") is downloaded. Please Do not Close Program.. INSTALLING..")
+					MsgBox($MB_OK,"AUTO UPDATE","Update (" & String($Getversion) &") is downloaded. Please Do not Close Program and WAIT!.. INSTALLING..",4)
 					if $UpdateFileExistsEXE Then
 						ShellExecute("update.exe","",@ScriptDir)
 					ElseIf $UpdateFileExistsAU3 Then
