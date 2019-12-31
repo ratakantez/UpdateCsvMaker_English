@@ -23,7 +23,7 @@ Global $Comment = ""
 Global $Comment2 = ""
 
 Global $Program_Name = "CSV Maker "
-Global $Program_Version = "v1.6"
+Global $Program_Version = "v1.5"
 
 Global $InfoAfterStart
 
