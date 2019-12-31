@@ -35,4 +35,9 @@ v1.5
 -Program may need AutoIt. If you dont have program will download and let you to install.
 **Some Minor Bugs fixed
 **Version History added to MAIN GUI
+**Discription added to Drop Functions in CSV File
+
+v.1.6
+**Some Minor Bugs Fixed.
+**New Guide Videos added on Youtube
 
