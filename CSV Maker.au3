@@ -61,6 +61,8 @@
 
 InstallAutoIt()
 TryUpdate()
+	FileDelete(@ScriptDir & "\update.exe"); this will delete the update exe file if exist
+	FileDelete(@ScriptDir & "\update.au3"); this will delete the update au3 file if exist
 
 
 Func SetBitmap($hGUI, $hImage, $iOpacity)

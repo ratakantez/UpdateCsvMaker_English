@@ -1384,7 +1384,7 @@ Func Update()
 
 
 	;~ ##########################MAIN FOLDER############################################
-	$URLd ="https://raw.githubusercontent.com/ratakantez/UpdateCsvMaker_English/master/Csv%20Maker.au3"
+	$URLd ="https://raw.githubusercontent.com/ratakantez/UpdateCsvMaker_English/master/CSV%20Maker.au3"
 	$hDownload = InetGet($URLd,@ScriptDir & "\Csv Maker.au3", $INET_FORCERELOAD, $INET_DOWNLOADWAIT)
 	$FileNumber = $n-$Count
 	GUICtrlSetData($ProgressLabel,$FileNumber & " File Updated")
@@ -1395,7 +1395,7 @@ Func Update()
     ;Until InetGetInfo($hDownload, $INET_DOWNLOADCOMPLETE)
 
 
-	$URLd ="https://github.com/ratakantez/UpdateCsvMaker_English/blob/master/Csv%20Maker.exe?raw=true"
+	$URLd ="https://github.com/ratakantez/UpdateCsvMaker_English/blob/master/CSV%20Maker.exe?raw=true"
 	$hDownload = InetGet($URLd,@ScriptDir & "\Csv Maker.exe", $INET_FORCERELOAD, $INET_DOWNLOADWAIT)
 	$FileNumber = $n-$Count
 	GUICtrlSetData($ProgressLabel,$FileNumber & " File Updated")
