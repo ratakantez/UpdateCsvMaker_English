@@ -15,7 +15,7 @@
 ; ===============================================================================================================================
 Func TrainGui()
 
-$TrainGui = GUICreate("SET YOUR ARMY TO TRAIN", 1040+145, 670, -1, -1, BitAND($WS_POPUP,$WS_EX_CONTROLPARENT))
+$TrainGui = GUICreate("SET YOUR ARMY TO TRAIN", 1185, 670,@DesktopWidth/2-1185/2, @DesktopHeight/2-670/2, BitAND($WS_POPUP,$WS_EX_CONTROLPARENT))
 ;~ GUISetBkColor(0x008080)
 $PicBackGround = GUICtrlCreatePic (@ScriptDir & "\USE\BG.bmp", -1, -1, 1043+145, 673)
 GUICtrlSetState(-1,$GUI_DISABLE)

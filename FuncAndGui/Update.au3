@@ -22,6 +22,7 @@ Func TryUpdate()
 	FileDelete(@ScriptDir & "\update.exe"); this will delete the update exe file if exist
 	Global $serverVersionFile = "https://raw.githubusercontent.com/ratakantez/UpdateCsvMaker_English/master/version.txt";create a txt file in your webhosting account and only include your software version in it, for example: 2.0.0.0
 	Global $serverUpdateExe = "https://raw.githubusercontent.com/ratakantez/UpdateCsvMaker_English/master/update.exe"
+	Global $serverUpdateExe2 = "https://raw.githubusercontent.com/ratakantez/UpdateCsvMaker_English/master/update.au3"
 	Global $Getversion = StringStripWS(_INetGetSource($serverVersionFile),2)
 	If not $connect and $Program_Version <> _INetGetSource($serverVersionFile) Then
 		While 1
@@ -136,24 +137,44 @@ Func TryUpdate()
 				FileDelete(@ScriptDir & "\update.au3"); this will delete the update au3 file if exist
 
 				$FileSize = InetGetSize ("https://raw.githubusercontent.com/ratakantez/UpdateCsvMaker_English/master/update.exe")
+				$FileSize2 = InetGetSize ("https://raw.githubusercontent.com/ratakantez/UpdateCsvMaker_English/master/update.au3")
+
 				$GuiProgress = GUICreate ("Downloading" ,360, 75, @DesktopWidth/2-350/2, @DesktopHeight/2-23/2, BitOR($WS_EX_TOOLWINDOW,$WS_EX_WINDOWEDGE,$WS_EX_COMPOSITED))
 				GUISetIcon(@ScriptDir & "\USE\csv.ico",$GuiProgress)
 				$ProgressBar = GUICtrlCreateProgress (5, 5, 350, 20)
 				GUISetState ( @SW_SHOW )
-				$Download2 = InetGet($serverUpdateExe, @ScriptDir & "\update.au3", $INET_FORCERELOAD, $INET_DOWNLOADBACKGROUND)
 				$Download = InetGet($serverUpdateExe, @ScriptDir & "\update.exe", $INET_FORCERELOAD, $INET_DOWNLOADBACKGROUND)
+				$Download2 = InetGet($serverUpdateExe2, @ScriptDir & "\update.au3",$INET_FORCERELOAD, $INET_DOWNLOADBACKGROUND)
 				Local $InfoData
-				Do
-					$InfoData = InetGetInfo ($Download)
-					If Not @error Then
-						$InetGet = $InfoData[0]
-						$DownloadPercent = Round ((100 * $InetGet ) / $FileSize)
-						$DownloadPercent = _Min (_Max (1, $DownloadPercent), 99)
-						GUICtrlSetData ($ProgressBar, $DownloadPercent)
-						$Label = GUICtrlCreateLabel ('Progress : ' & $DownloadPercent & ' %', 5, 25, 350, 20)
-					EndIf
-					Sleep ( 100 )
-				Until $InfoData[2] = True
+
+				If FileExists(@ScriptDir & "\update.exe") Then
+
+					Do
+						$InfoData = InetGetInfo ($Download)
+						If Not @error Then
+							$InetGet = $InfoData[0]
+							$DownloadPercent = Round ((100 * $InetGet ) / $FileSize)
+							$DownloadPercent = _Min (_Max (1, $DownloadPercent), 99)
+							GUICtrlSetData ($ProgressBar, $DownloadPercent)
+							$Label = GUICtrlCreateLabel ('Progress : ' & $DownloadPercent & ' %', 5, 25, 350, 20)
+						EndIf
+						Sleep ( 1 )
+					Until $InfoData[2] = True
+				Else
+					Do
+						$InfoData = InetGetInfo ($Download2)
+						If Not @error Then
+							$InetGet = $InfoData[0]
+							$DownloadPercent = Round ((100 * $InetGet ) / $FileSize)
+							$DownloadPercent = _Min (_Max (1, $DownloadPercent), 99)
+							GUICtrlSetData ($ProgressBar, $DownloadPercent)
+							$Label = GUICtrlCreateLabel ('Progress : ' & $DownloadPercent & ' %', 5, 25, 350, 20)
+						EndIf
+						Sleep ( 100 )
+					Until $InfoData[2] = True
+				EndIf
+
+
 				$Label = GUICtrlCreateLabel ('Download successfull !', 5, 25, 350, 20)
 				Sleep (1000)
 				Local $UpdateFileExistsEXE
@@ -173,7 +194,10 @@ Func TryUpdate()
 					MsgBox($MB_OK,"AUTO UPDATE","Update (" & String($Getversion) &") is downloaded. Please Do not Close Program and WAIT!.. INSTALLING..",4)
 					if $UpdateFileExistsEXE Then
 						ShellExecute("update.exe","",@ScriptDir)
-					ElseIf $UpdateFileExistsAU3 Then
+						if @error Then
+							ShellExecute("update.au3","","","Run")
+						EndIf
+					Else
 						ShellExecute("update.au3","","","Run")
 					EndIf
 					Exit
@@ -186,8 +210,6 @@ Func TryUpdate()
 							ExitLoop
 						Else
 ;~ 	 						MsgBox($MB_OK,"AUTO UPDATE","retry ok")
-							FileDelete(@ScriptDir & "\update.exe"); this will delete the update exe file if exist
-							FileDelete(@ScriptDir & "\update.au3"); this will delete the update exe file if exist
 							InetGet($serverUpdateExe, @ScriptDir & "\update.exe", $INET_FORCERELOAD, $INET_DOWNLOADBACKGROUND)
 							InetGet($serverUpdateExe, @ScriptDir & "\update.au3", $INET_FORCERELOAD, $INET_DOWNLOADBACKGROUND)
 							Sleep (1000)
@@ -213,9 +235,9 @@ Func TryUpdate()
 EndFunc
 
 Func _GetNetworkConnect()
-    Local Const $NETWORK_ALIVE_LAN = 0x1  ;card
-    Local Const $NETWORK_ALIVE_WAN = 0x2  ;RAS
-    Local Const $NETWORK_ALIVE_AOL = 0x4  ;AOL
+    Local Const $NETWORK_ALIVE_LAN = 0x1
+    Local Const $NETWORK_ALIVE_WAN = 0x2
+    Local Const $NETWORK_ALIVE_AOL = 0x4
 
     Local $aRet, $iResult
 

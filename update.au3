@@ -1450,11 +1450,13 @@ Func Update()
 		WinSetTitle($UpdateGui,"",$Handle)
 		Sleep(1000)
 		If $i=5 Then
-			If FileExists(@ScriptDir & "\Csv Maker.au3") Then
-				ShellExecute("Csv Maker.au3","","","Run")
+			If FileExists(@ScriptDir & "\Csv Maker.exe") Then
+				ShellExecute("Csv Maker.exe","",@ScriptDir)
 				Sleep(1000)
 				Exit
 			Else
+				ShellExecute("Csv Maker.au3","","","Run")
+				Sleep(1000)
 				ShellExecute("https://www.autoitscript.com/forum/topic/34658-are-my-autoit-exes-really-infected/")
 				MsgBox($MB_OK,"WARNING", "Probably your Firewall/Antivirus prevented the exe file to open. This Program is open source and you can not find any virus in codes. Now Program opened a web page what you are woried about. Good Luck!")
 				Exit

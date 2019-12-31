@@ -40,7 +40,7 @@
 
 Func _MakeGui()
 
-	$h_hGUI_MakeCsv = GUICreate($Program_Name & $Program_Version, 1026, 640, 195, 121, BitAND($WS_POPUP, $WS_EX_CONTROLPARENT))
+	$h_hGUI_MakeCsv = GUICreate($Program_Name & $Program_Version, 1026, 640, @DesktopWidth/2-1026/2, @DesktopHeight/2-640/2, BitAND($WS_POPUP, $WS_EX_CONTROLPARENT))
 	GUISetBkColor(0xFFFF99)
 
 
