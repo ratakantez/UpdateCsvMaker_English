@@ -44,8 +44,8 @@
 #pragma compile(FileDescription, Clash of Clans Bot - Csv Script Maker - https://mybot.run)
 #pragma compile(ProductName, CSV MAKER)
 
-#pragma compile(ProductVersion, 1.5)
-#pragma compile(FileVersion, 1.5)
+#pragma compile(ProductVersion, 1.7)
+#pragma compile(FileVersion, 1.7)
 #include <EditConstants.au3>
 #include <GUIConstantsEx.au3>
 #include <GuiImageList.au3>
