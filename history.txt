@@ -1,0 +1,38 @@
+v1.0
+**Base Version
+
+v1.1
+**Castle Added. Some Minor Bugs fixed
+
+v1.2
+**Random X and Y pixel for Spell Vector added. Some minor Bugs fixed.
+
+v1.3 
+**Royal Champion Added
+**Yeti Added
+**Siege Barrack Added
+**TH13 Training Added (Royal Champion Problem will be solved in offical version 7.8.1+)
+Problem is because of version 7.8.1.. Normailly CSV Maker works good. 
+Click for solution
+**Royale Champion Option Added to WAIT function
+**Language and Gui bugs FIXED
+**Scatter Shot is Added for Side Function and Drop Function on Buildings
+
+v1.4
+**UNDO Bug is FIXED
+
+v1.4.1
+**Sleep and Wait Time Bugs are FIXED. 
+-Now you can input whatever you want without ERROR 5B message in LOG. 
+** Loading image is added with program name and version
+
+v1.5
+**Fixed Spell Numbers 
+-Now Program can put Spell Number 1 when you add.
+**Added Auto Update Function.
+-Now when an upgrade release you dont need to download new one. Program will update automatically.
+**Auto Install Autoit
+-Program may need AutoIt. If you dont have program will download and let you to install.
+**Some Minor Bugs fixed
+**Version History added to MAIN GUI
+
