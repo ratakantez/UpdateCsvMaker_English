@@ -44,7 +44,7 @@ Func TryUpdate()
 			MsgBox($MB_OK,"AUTO UPDATE","Your Version is Last version (" & String($Program_Version) &"). It will start loading in a second..",3)
 ;~ 	 		MsgBox($MB_OK,"AUTO UPDATE","nothing")
 		Else
-			Local $decideupdate = MsgBox($MB_OKCANCEL,"AUTO UPDATE","Your Version is Old (" & String($Program_Version) &"). Program will be updated automaticly. Please Click OK to go on or click CANCEL to skip update.",9)
+			Local $decideupdate = MsgBox($MB_OKCANCEL,"AUTO UPDATE","Your Version is Old (" & String($Program_Version) &"). Program will be updated automaticly. Please Click OK Or Wait to go on or click CANCEL to skip update.",9)
 			If $decideupdate = 1 Then
 
 				Local $Key1 = RegRead("HKEY_LOCAL_MACHINE64\SOFTWARE\Wow6432Node\AutoIt v3\AutoIt","Version")
