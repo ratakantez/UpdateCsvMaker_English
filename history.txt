@@ -26,5 +26,6 @@
 **Gui improved (Train Gui)
 **Wideness INDEX added!
 -Random DROP Indexes in battle.
+**Request CC added
 -----v.1.8-----
 **Shuffle Troops in Group (soon)
