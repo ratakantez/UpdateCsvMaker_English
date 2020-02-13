@@ -28,6 +28,6 @@
 -Random DROP Indexes in battle.
 **Request CC added
 -----v.1.8-----
-**Randomise Logip problem fixed
+**Randomise Logic problem fixed
 -----v.1.9-----
 **Shuffle Troops in Group (soon)
