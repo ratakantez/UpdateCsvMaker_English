@@ -30,4 +30,11 @@
 -----v.1.8-----
 **Randomise Logic problem fixed
 -----v.1.9-----
-**Shuffle Troops in Group (soon)
+**Shuffle Troops in Group (soon maybe?)
+for now not working
+---v.2 (2022)---
+**Train Gui and Func. fixed.
+**Help Pages added.
+**Map is updated and fixed.
+**New S.Troops, Sieges and normal troops added.
+**Minor Logic Problems fixed.
