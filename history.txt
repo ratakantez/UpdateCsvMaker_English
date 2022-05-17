@@ -38,3 +38,11 @@ for now not working
 **Map is updated and fixed.
 **New S.Troops, Sieges and normal troops added.
 **Minor Logic Problems fixed.
+
+---v.3 (2022)---
+**All Troops are updated (S.Dragon, Flame Flinger)
+**All codes has been rewritten and gui changed
+** Multi drop point added
+** Wait func changed
+**New CSV Maker School Videos added
+** Multi Drop Functions added
