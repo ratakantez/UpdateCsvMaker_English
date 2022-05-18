@@ -46,3 +46,5 @@ for now not working
 ** Wait func changed
 **New CSV Maker School Videos added
 ** Multi Drop Functions added
+---v.3.01 (2022)---
+**Syntex mistakes in code fixed
