@@ -1,10 +1,7 @@
------v1.0-----
+-----CHANGEOLOG-----
 **Base Version
------v1.1-----
 **Castle Added. Some Minor Bugs fixed
------v1.2-----
 **Random X and Y pixel for Spell Vector added.
------v1.3-----
 **Royal Champion Added
 **Yeti Added
 **Siege Barrack Added
@@ -12,27 +9,20 @@
 **Royale Champion Option Added to WAIT function
 **Language and Gui bugs FIXED
 **Scatter Shot is Added for Side Function and Drop Function on Buildings
------v1.4-----
 **UNDO Bug is FIXED
------v1.4.1-----
 **Sleep and Wait Time Bugs are FIXED. 
 **Loading image is added with program name and version
------v1.5-----
 **Fixed Spell Numbers 
 **Version History added to MAIN GUI
 **Discription added to Drop Functions in CSV File
------v.1.7-----
 **Program insert to MYBot
 **Gui improved (Train Gui)
 **Wideness INDEX added!
 -Random DROP Indexes in battle.
 **Request CC added
------v.1.8-----
 **Randomise Logic problem fixed
------v.1.9-----
 **Shuffle Troops in Group (soon maybe?)
 for now not working
----v.2 (2022)---
 **Train Gui and Func. fixed.
 **Help Pages added.
 **Map is updated and fixed.
@@ -48,3 +38,5 @@ for now not working
 ** Multi Drop Functions added
 ---v.3.01 (2022)---
 **Syntex mistakes in code fixed
+---v.3.02 (2022)---
+**Sdragon, Pekka, SWallBreaker,Flame Flinger fixed in Set Train Func. 
